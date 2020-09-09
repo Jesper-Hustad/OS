@@ -2,7 +2,10 @@
 
 ### 1.
 
-We know that to start a new process/program the program is put in memory, the program counter is set to the first instruction, stack pointer is set tot the base of the user stack. Finally there will of course be a switch from kernel to user mode
+We know that to start a new process/program the program is put in memory,  
+the program counter is set to the first instruction,  
+stack pointer is set to the base of the user stack.  
+Finally there will of course be a switch from kernel to user mode
 
 
 The benefits of going to user mode is that of security (this goes back to the core purpose of an OS). Meaning the code (that could be mallicious or buggy) can't take direct controll over the hardware.
@@ -10,7 +13,7 @@ The benefits of going to user mode is that of security (this goes back to the co
 
 ### 2.
 
-at `include/linux/sched.h` we can find task_struct defined on line 629 and the variable for the process ID and accumulated virtual memory respectively:
+At `include/linux/sched.h` we can find task_struct defined on line 629 and the variable for the process ID and accumulated virtual memory respectively:
 
 a)
 ```c
@@ -24,7 +27,7 @@ b)
 1047:	u64				acct_vm_mem1;
 ```
 
-
+--------
 
 By using `man top` we can find out what the fields stand for.  
 
